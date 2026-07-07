@@ -169,18 +169,21 @@ A single-cycle 32-bit MIPS-like processor implementing R-type, I-type, and J-typ
 
 | Module | Responsibility |
 |---|---|
-| `Datapath.v` | Connects ALU, register file, muxes, PC logic |
-| `control.v` | Generates control signals from opcode/funct |
-| `ALU.v` | 32-bit ALU (add, sub, logic, shifts, comparisons) |
-| `registerfile32.v` | 32×32-bit register file |
-| `rom.v` | Instruction memory (loaded via `$readmemh`) |
-| `ram.v` | Data memory |
-| `mux2.v` / `mux4.v` | Datapath multiplexers |
-| `signext.v` | Immediate sign-extension |
-| `sl2.v` | Shift-left-2 for branch/jump target calc |
-| `adder.v` | Ripple-carry adder (PC+4, branch target) |
 | `MIPS_SCP.v` | Top-level CPU module |
 | `MIPS_SCP_tb.v` | Testbench (clock + reset generation) |
+| `datapath.v` | Connects ALU, register file, muxes, PC logic |
+| `control.v` | Generates control signals from opcode/funct |
+| `alu32.v` | 32-bit ALU (add, sub, logic, shifts, comparisons) |
+| `regfile32.v` | 32×32-bit register file |
+| `rom.v` | Instruction memory (loaded via `$readmemh`) |
+| `ram.v` | Data memory |
+| `adder.v` | Ripple-carry adder (PC+4, branch target) |
+| `mux2.v` | 2-to-1 datapath multiplexer |
+| `mux4.v` | 4-to-1 datapath multiplexer (extended for JAL) |
+| `signext.v` | Immediate sign-extension |
+| `sl2.v` | Shift-left-2 for branch/jump target calc |
+| `decoder4.v` | 4-bit decoder |
+| `flopr_param.v` | Parameterized flip-flop register (PC) |
 
 ### Extending the Control Unit for JAL/JR
 
@@ -241,26 +244,35 @@ Sample verified results included:
 mips32-single-cycle-cpu/
 ├── verilog/
 │   ├── MIPS_SCP.v          # Top-level CPU module
-│   ├── Datapath.v          # Datapath (ALU, regfile, muxes, PC logic)
+│   ├── MIPS_SCP_tb.v       # Testbench (clock + reset generation)
+│   ├── datapath.v          # Datapath (ALU, regfile, muxes, PC logic)
 │   ├── control.v           # Control unit
-│   ├── ALU.v                # 32-bit ALU
-│   ├── registerfile32.v    # Register file
+│   ├── alu32.v              # 32-bit ALU
+│   ├── regfile32.v         # Register file
 │   ├── rom.v                # Instruction memory
 │   ├── ram.v                # Data memory
-│   ├── mux2.v / mux4.v     # Multiplexers
+│   ├── adder.v              # Ripple-carry adder
+│   ├── mux2.v               # 2-to-1 multiplexer
+│   ├── mux4.v               # 4-to-1 multiplexer
 │   ├── signext.v           # Sign extension
 │   ├── sl2.v                # Shift-left-2
-│   ├── adder.v              # Ripple-carry adder
-│   └── MIPS_SCP_tb.v       # Testbench
+│   ├── decoder4.v          # 4-bit decoder
+│   └── flopr_param.v       # Parameterized flip-flop register
 ├── assembly/
-│   ├── smp.asm              # Sample arithmetic/logic test program
-│   ├── mips_os.asm         # MAX/MIN/MEAN OS program
-│   └── divide_subroutine.asm
-├── assembler/
-│   └── (C++ assembler source, adapted from UpgradedMIPS32Assembler)
+│   ├── smp2.asm             # Sample arithmetic/logic test program
+│   └── sample3.asm         # MAX/MIN/MEAN OS program
+├── hex/
+│   ├── memfile1.hex        # Assembled machine code (test 1)
+│   ├── memfile2.hex        # Assembled machine code (test 2)
+│   └── memfile3.hex        # Assembled machine code (test 3)
+├── sim/
+│   ├── 332project.mpf      # ModelSim project file
+│   ├── 332project.cr.mti   # ModelSim compile record
+│   ├── rom.v.bak            # Backup of ROM module
+│   ├── transcript           # ModelSim simulation transcript log
+│   └── vsim.wlf             # ModelSim waveform log
 ├── docs/
-│   ├── CSE332_Project_Outline.pdf
-│   └── CSE332_Project_Report.pdf
+│   └── CSE332_Project_report.pdf
 └── README.md
 ```
 
