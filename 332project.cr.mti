@@ -1,0 +1,129 @@
+E:/NSU/Spring25/CSE332/Project/FInalfinal/rom.v {1 {vlog -work work -stats=none E:/NSU/Spring25/CSE332/Project/FInalfinal/rom.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module rom
+
+Top level modules:
+	rom
+
+} {} {}} E:/NSU/Spring25/CSE332/Project/FInalfinal/adder.v {1 {vlog -work work -stats=none E:/NSU/Spring25/CSE332/Project/FInalfinal/adder.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module adder
+-- Compiling module FA
+
+Top level modules:
+	adder
+
+} {} {}} E:/NSU/Spring25/CSE332/Project/FInalfinal/ram.v {1 {vlog -work work -stats=none E:/NSU/Spring25/CSE332/Project/FInalfinal/ram.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ram
+
+Top level modules:
+	ram
+
+} {} {}} E:/NSU/Spring25/CSE332/Project/FInalfinal/signext.v {1 {vlog -work work -stats=none E:/NSU/Spring25/CSE332/Project/FInalfinal/signext.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module signext
+
+Top level modules:
+	signext
+
+} {} {}} E:/NSU/Spring25/CSE332/Project/FInalfinal/decoder4.v {1 {vlog -work work -stats=none E:/NSU/Spring25/CSE332/Project/FInalfinal/decoder4.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module decoder4
+
+Top level modules:
+	decoder4
+
+} {} {}} E:/NSU/Spring25/CSE332/Project/FInalfinal/flopr_param.v {1 {vlog -work work -stats=none E:/NSU/Spring25/CSE332/Project/FInalfinal/flopr_param.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module flopr_param
+
+Top level modules:
+	flopr_param
+
+} {} {}} E:/NSU/Spring25/CSE332/Project/FInalfinal/MIPS_SCP_tb.v {1 {vlog -work work -stats=none E:/NSU/Spring25/CSE332/Project/FInalfinal/MIPS_SCP_tb.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module MIPS_SCP_tb
+
+Top level modules:
+	MIPS_SCP_tb
+
+} {} {}} E:/NSU/Spring25/CSE332/Project/FInalfinal/mux2.v {1 {vlog -work work -stats=none E:/NSU/Spring25/CSE332/Project/FInalfinal/mux2.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module mux2
+
+Top level modules:
+	mux2
+
+} {} {}} E:/NSU/Spring25/CSE332/Project/FInalfinal/MIPS_SCP.v {1 {vlog -work work -stats=none E:/NSU/Spring25/CSE332/Project/FInalfinal/MIPS_SCP.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module adder
+-- Compiling module FA
+-- Compiling module alu32
+-- Compiling module flopr_param
+-- Compiling module mux2
+-- Compiling module mux4
+-- Compiling module registerfile32
+-- Compiling module signext
+-- Compiling module slt2
+-- Compiling module Datapath
+-- Compiling module ram
+-- Compiling module rom
+-- Compiling module Controlunit
+-- Compiling module MIPS_SCP
+
+Top level modules:
+	MIPS_SCP
+
+} {} {}} E:/NSU/Spring25/CSE332/Project/FInalfinal/mux4.v {1 {vlog -work work -stats=none E:/NSU/Spring25/CSE332/Project/FInalfinal/mux4.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module mux4
+
+Top level modules:
+	mux4
+
+} {} {}} E:/NSU/Spring25/CSE332/Project/FInalfinal/alu32.v {1 {vlog -work work -stats=none E:/NSU/Spring25/CSE332/Project/FInalfinal/alu32.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module alu32
+
+Top level modules:
+	alu32
+
+} {} {}} E:/NSU/Spring25/CSE332/Project/FInalfinal/datapath.v {1 {vlog -work work -stats=none E:/NSU/Spring25/CSE332/Project/FInalfinal/datapath.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module adder
+-- Compiling module FA
+-- Compiling module alu32
+-- Compiling module flopr_param
+-- Compiling module mux2
+-- Compiling module mux4
+-- Compiling module registerfile32
+-- Compiling module signext
+-- Compiling module slt2
+-- Compiling module Datapath
+
+Top level modules:
+	Datapath
+
+} {} {}} E:/NSU/Spring25/CSE332/Project/FInalfinal/sl2.v {1 {vlog -work work -stats=none E:/NSU/Spring25/CSE332/Project/FInalfinal/sl2.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module slt2
+
+Top level modules:
+	slt2
+
+} {} {}} E:/NSU/Spring25/CSE332/Project/FInalfinal/control.v {1 {vlog -work work -stats=none E:/NSU/Spring25/CSE332/Project/FInalfinal/control.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Controlunit
+
+Top level modules:
+	Controlunit
+
+} {} {}} E:/NSU/Spring25/CSE332/Project/FInalfinal/regfile32.v {1 {vlog -work work -stats=none E:/NSU/Spring25/CSE332/Project/FInalfinal/regfile32.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module registerfile32
+
+Top level modules:
+	registerfile32
+
+} {} {}}
